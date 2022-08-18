@@ -1,6 +1,7 @@
+VERSION=0.0.1
 IMAGE_NAME=airflow-hello-world-go
 IMAGE_REPO=ericbutera
-IMAGE_TAG=latest
+IMAGE_TAG=${VERSION}
 MAIN=main.go
 
 .PHONY: build
@@ -13,7 +14,7 @@ clean:
 
 .PHONY: image-build
 image-build:
-	docker build -t ${IMAGE_REPO}/${IMAGE_NAME} .
+	docker build -t ${IMAGE_REPO}/${IMAGE_NAME}:${IMAGE_TAG} .
 
 .PHONY: image-push
  image-push:
