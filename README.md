@@ -13,6 +13,11 @@ make image-build
 make image-push
 ```
 
+Notes:
+
+- Image tag uses semvar tags
+- Image is stored on [dockerhub](https://hub.docker.com/repository/docker/ericbutera/airflow-hello-world-go)
+
 ## TODO
 
 - The [airflow go client](https://github.com/apache/airflow-client-go) has everything necessary to integrate with Airflow via OpenAPI spec.
