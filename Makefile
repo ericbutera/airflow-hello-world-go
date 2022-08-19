@@ -16,6 +16,10 @@ clean:
 image-build:
 	docker build -t ${IMAGE_REPO}/${IMAGE_NAME}:${IMAGE_TAG} .
 
+.PHONY: image-run
+image-run:
+	docker run -t ${IMAGE_REPO}/${IMAGE_NAME}:${IMAGE_TAG}
+
 .PHONY: image-push
  image-push:
 	docker push ${IMAGE_REPO}/${IMAGE_NAME}:${IMAGE_TAG}
